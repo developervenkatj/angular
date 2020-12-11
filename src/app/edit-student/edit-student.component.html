@@ -1,0 +1,17 @@
+<form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name</label>
+      <input type="text" class="form-control" #name aria-describedby="emailHelp" value="{{data.name}}" (input)="nameChanged(name.value)">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Date Of Birth</label>
+      <input type="text" class="form-control" id="dob" placeholder="DD-MM-YY" value="{{data.dateOfBirth}}" disabled >
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Status</label>
+        <input type="text" class="form-control" #status value="{{data.active}}" (input)="statusChanged(status.value)">
+      </div>
+   
+    <button type="submit" class="btn btn-primary"  (click)="updatedate()" >Submit</button><br>
+    <button type="submit" class="btn btn-primary"  style="margin-top: 10px;" (click)="home()" >Home</button>
+  </form>
